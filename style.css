@@ -19,7 +19,7 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: #fdfdfd;
+  color: #fdfdfd; /* light text to contrast brown */
   font-weight: bold;
   font-family: "Courier New", monospace;
 }
@@ -28,3 +28,4 @@ nav a:hover {
   text-decoration: underline;
   color: #ffeecc;
 }
+
