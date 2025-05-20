@@ -1,4 +1,4 @@
-/* Reset and base style */
+/* --- Base Styles --- */
 body {
   margin: 0;
   padding: 0;
@@ -50,8 +50,16 @@ nav a:hover {
   color: #fff;
 }
 
+/* --- Site Title (Optional) --- */
+.site-title {
+  color: #fdfdfd;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
-/* Main content */
+/* --- Main Content --- */
 main {
   flex: 1;
   display: flex;
@@ -79,12 +87,4 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
-
-.site-title {
-  color: #fdfdfd;
-  text-align: center;
-  font-family: "Courier New", monospace;
-  font-size: 20px;
-  margin-bottom: 10px;
 }
