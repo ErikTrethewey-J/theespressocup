@@ -10,30 +10,46 @@ body {
   height: 100vh;
 }
 
-/* Navigation bar */
+/* --- Navigation Bar --- */
 header {
   background-color: #222;
-  padding: 10px 0;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+nav {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
 
 nav a {
-  color: #fdfdfd;
+  color: #f4f4f4;
   text-decoration: none;
   font-weight: bold;
+  padding: 5px 10px;
+  transition: background 0.3s ease;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 16px;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: #444;
+  color: #fff;
 }
+
 
 /* Main content */
 main {
@@ -63,4 +79,12 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.site-title {
+  color: #fdfdfd;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
