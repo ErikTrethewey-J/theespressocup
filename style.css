@@ -1,22 +1,30 @@
-/* --- Navigation Reset (Old School Look) --- */
+/* --- Navigation Bar with Brown Background --- */
+nav {
+  background-color: #5a3825; /* coffee-brown */
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 0;
   text-align: center;
 }
 
 nav li {
   display: inline;
-  margin: 0 10px;
+  margin: 0 12px;
 }
 
 nav a {
   text-decoration: none;
-  color: #333;
+  color: #fdfdfd;
   font-weight: bold;
+  font-family: "Courier New", monospace;
 }
 
 nav a:hover {
   text-decoration: underline;
+  color: #ffeecc;
 }
