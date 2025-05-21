@@ -139,45 +139,64 @@ section {
   border-bottom: 1px solid #e0dcd7;
 }
 
+/* --- Section Container --- */
+.section-box {
+  background-color: #f6f3f0;
+  padding: 60px 20px;
+  border-top: 1px solid #e0dcd7;
+  border-bottom: 1px solid #e0dcd7;
+  min-height: 500px; /* Ensures all sections are even height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* --- Featured Posts Section --- */
-.featured-posts h2 {
-  font-size: 1.8em;
-  margin-bottom: 30px;
-  color: #3e2f27;
-  text-align: center;
+.featured-posts {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .post-list {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .post {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 300px;
+  min-height: 240px;
   background-color: #fff;
   border-radius: 8px;
   border: 1px solid #eee;
   box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .post h3 {
   margin-bottom: 0.5em;
   color: #333;
+  font-size: 1.1em;
 }
 
 .post p {
   color: #555;
+  font-size: 0.95em;
+  flex-grow: 1;
   margin-bottom: 1em;
 }
 
 /* --- About Preview Section --- */
 .about-preview {
-  text-align: center;
   max-width: 700px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .about-preview h2 {
