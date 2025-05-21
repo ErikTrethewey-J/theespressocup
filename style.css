@@ -1,18 +1,16 @@
-/* Responsive Viewport Setup */
+/* ===================================
+   Base & Reset
+=================================== */
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-
-/* --- Base --- */
-body {
   margin: 0;
   padding: 0;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: 'Segoe UI', sans-serif;
   background-color: #fdfdfd;
   color: #333;
@@ -29,7 +27,11 @@ a:hover {
   text-decoration: underline;
 }
 
-/* --- Navigation Bar --- */
+
+/* ===================================
+   Navigation Bar
+=================================== */
+
 .navbar {
   background-color: #3e2f27;
   padding: 16px 0;
@@ -78,32 +80,11 @@ a:hover {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
+/* ===================================
+   Hero Section
+=================================== */
 
-  .nav-links.active {
-    display: flex;
-  }
-}
-
-
-/* --- Main Home Layout --- */
-main.home {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-/* --- Hero Section Polished --- */
 .hero {
   background-color: #f6f3f0;
   padding: 80px 20px;
@@ -144,46 +125,29 @@ main.home {
   transform: translateY(-2px);
 }
 
-/* --- Section Spacing Improvements --- */
-section {
-  margin-bottom: 80px;
+
+/* ===================================
+   Featured Posts
+=================================== */
+
+.featured-posts.section-box {
+  background-color: #f6f3f0;
+  border-top: 1px solid #e0dcd7;
+  border-bottom: 1px solid #e0dcd7;
+  padding: 60px 20px;
+  margin-bottom: 60px;
 }
 
-.featured-posts,
-.about-preview {
-  padding: 0 20px;
+.featured-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 40px;
 }
 
-.featured-posts h2,
-.about-preview h2 {
+.featured-posts h2 {
   font-size: 1.6em;
   margin-bottom: 20px;
   color: #3e2f27;
-  text-align: center;
-}
-
-.post-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-
-/* --- Section Box (Cleaned Up) --- */
-.section-box {
-  background-color: #f6f3f0;
-  padding: 60px 20px;
-  border-top: 1px solid #e0dcd7;
-  border-bottom: 1px solid #e0dcd7;
-  margin-bottom: 60px;  /* Increased from 40px */
-}
-
-
-
-/* --- Featured Posts Section --- */
-.featured-posts {
-  max-width: 900px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -217,11 +181,22 @@ section {
 }
 
 
-/* --- About Preview Section --- */
+/* ===================================
+   About Preview
+=================================== */
+
+.about-preview.section-box {
+  background-color: #f6f3f0;
+  border-top: 1px solid #e0dcd7;
+  border-bottom: 1px solid #e0dcd7;
+  padding: 40px 20px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
 .about-preview {
   max-width: 700px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .about-preview h2 {
@@ -235,12 +210,11 @@ section {
   margin-bottom: 1.5em;
 }
 
-.about-preview.section-box {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
 
-/* --- Footer --- */
+/* ===================================
+   Footer
+=================================== */
+
 .footer {
   background-color: #3e2f27;
   color: #fff;
@@ -249,17 +223,32 @@ section {
   font-size: 0.9em;
 }
 
-/* --- Mobile Styles --- */
+
+/* ===================================
+   Responsive (Mobile)
+=================================== */
+
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  .nav-toggle {
+    display: block;
+  }
+
   .nav-links {
+    display: none;
     flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
     gap: 15px;
     padding-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .hero h1 {
@@ -272,12 +261,7 @@ section {
     font-size: 0.95em;
   }
 
-  .post-list {
-    flex-direction: column;
-  }
-
   .post {
     max-width: 100%;
   }
 }
-
