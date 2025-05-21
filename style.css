@@ -131,14 +131,18 @@ section {
 }
 
 
-/* --- Featured Posts --- */
-.featured-posts {
-  margin-bottom: 60px;
+/* --- Shared Section Style --- */
+.section-box {
+  background-color: #f6f3f0;
+  padding: 60px 20px;
+  border-top: 1px solid #e0dcd7;
+  border-bottom: 1px solid #e0dcd7;
 }
 
+/* --- Featured Posts Section --- */
 .featured-posts h2 {
   font-size: 1.8em;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #3e2f27;
   text-align: center;
 }
@@ -146,31 +150,47 @@ section {
 .post-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
+}
+
+.post {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
 }
 
 .post h3 {
-  margin-bottom: 0.3em;
+  margin-bottom: 0.5em;
   color: #333;
 }
 
 .post p {
-  margin: 0.5em 0;
   color: #555;
+  margin-bottom: 1em;
 }
 
-/* --- About Preview --- */
+/* --- About Preview Section --- */
 .about-preview {
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 80px;
+  margin: 0 auto;
 }
 
 .about-preview h2 {
   font-size: 1.8em;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: #3e2f27;
 }
+
+.about-preview p {
+  color: #555;
+  margin-bottom: 1.5em;
+}
+
 
 /* --- Footer --- */
 .footer {
