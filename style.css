@@ -10,36 +10,50 @@ body {
   min-height: 100vh;
 }
 
-/* --- Navigation Bar --- (leave this as is from last step) */
-nav {
-  background-color: #5a3825;
-  padding: 10px 0;
-  margin-bottom: 20px;
+/* --- Modern Navigation Bar --- */
+.navbar {
+  background-color: #3e2f27;
+  padding: 16px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav li {
-  display: inline;
-  margin: 0 12px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fdfdfd;
+.logo {
+  font-size: 24px;
+  color: #fff;
   font-weight: bold;
-  font-family: "Courier New", monospace;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-nav a:hover {
-  text-decoration: underline;
-  color: #ffeecc;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
+
+.nav-links a {
+  color: #fdfdfd;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #ffcf87;
+}
+
 
 /* --- Main Content Centered --- */
 main {
