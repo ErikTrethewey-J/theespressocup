@@ -32,12 +32,21 @@
           <h1>Send Me Coffee Thoughts</h1>
           <p>Have a question, suggestion, or just want to geek out over espresso? Fill out the form below:</p>
 
-          <form class="contact-form" action="#" method="post">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-            <button type="submit" class="cta-button">Send Message</button>
-          </form>
+<form class="contact-form" id="contactForm">
+  <label for="name">Your Name</label>
+  <input type="text" name="name" id="name" required />
+
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email" required />
+
+  <label for="message">Your Message</label>
+  <textarea name="message" id="message" rows="6" required></textarea>
+
+  <button type="submit" class="cta-button">Send Message</button>
+
+  <p id="form-status" class="form-status" style="display: none;">Sending...</p>
+</form>
+
         </div>
       </section>
     </main>

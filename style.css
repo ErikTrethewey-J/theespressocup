@@ -210,12 +210,10 @@ body {
   }
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 500px;
-  margin: 0 auto;
+.contact-form label {
+  font-weight: bold;
+  margin-top: 16px;
+  color: #3e2f27;
 }
 
 .contact-form input,
@@ -225,7 +223,9 @@ body {
   border-radius: 6px;
   font-size: 1em;
   font-family: 'Segoe UI', sans-serif;
+  margin-bottom: 10px;
   resize: vertical;
+  width: 100%;
 }
 
 .contact-form input:focus,
@@ -235,8 +235,11 @@ body {
   box-shadow: 0 0 0 2px rgba(107, 62, 38, 0.1);
 }
 
-
-
+.form-status {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
 
 /* ===================================
    Footer
