@@ -194,6 +194,12 @@ section {
   margin-bottom: 1.5em;
 }
 
+.about-preview.section-box {
+  padding: 40px 20px;
+  min-height: auto;
+}
+
+
 
 /* --- Footer --- */
 .footer {
