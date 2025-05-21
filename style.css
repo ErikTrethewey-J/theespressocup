@@ -150,6 +150,16 @@ body {
   margin-bottom: 1em;
 }
 
+.about-portrait {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* CTA Button */
 .cta-button {
   display: inline-block;
