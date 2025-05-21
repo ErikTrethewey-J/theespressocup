@@ -150,6 +150,18 @@ body {
   margin-bottom: 1em;
 }
 
+.post a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post a:hover {
+  color: #6b3e26;
+  text-decoration: underline;
+}
+
+
 .about-portrait {
   width: 160px;
   height: 160px;
