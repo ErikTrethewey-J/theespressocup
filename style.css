@@ -175,8 +175,9 @@ section {
   padding: 60px 20px;
   border-top: 1px solid #e0dcd7;
   border-bottom: 1px solid #e0dcd7;
-  margin-bottom: 40px; /* ✅ This creates space between stacked sections */
+  margin-bottom: 60px;  /* Increased from 40px */
 }
+
 
 
 /* --- Featured Posts Section --- */
@@ -235,11 +236,9 @@ section {
 }
 
 .about-preview.section-box {
-  padding: 40px 20px;
-  min-height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-
-
 
 /* --- Footer --- */
 .footer {
