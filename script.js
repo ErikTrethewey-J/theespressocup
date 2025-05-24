@@ -1,27 +1,35 @@
-// Toggle mobile nav visibility
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector(".nav-toggle");
-  const navLinks = document.querySelector(".nav-links");
+const form = document.getElementById("contactForm");
+const status = document.getElementById("form-status");
 
-  toggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-  });
+if (form) {
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-  // Handle contact form submission
-  const form = document.getElementById("contactForm");
-  const status = document.getElementById("form-status");
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      message: form.message.value,
+    };
 
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      status.textContent = "Sending...";
-      status.style.display = "block";
+    status.textContent = "Sending...";
+    status.style.display = "block";
 
-      // Simulated message send
-      setTimeout(() => {
+    try {
+      const response = await fetch("https://theespressocup-server.onrender.com/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
         status.textContent = "Message sent! I’ll get back to you soon.";
         form.reset();
-      }, 1200);
-    });
-  }
-});
+      } else {
+        status.textContent = "Something went wrong.";
+      }
+    } catch (error) {
+      console.error(error);
+      status.textContent = "Failed to connect to server.";
+    }
+  });
+}
