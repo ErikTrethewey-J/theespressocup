@@ -1,35 +1,49 @@
-const form = document.getElementById("contactForm");
-const status = document.getElementById("form-status");
+document.addEventListener("DOMContentLoaded", () => {
+  // 🍔 Hamburger menu toggle
+  const toggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
 
-if (form) {
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
+  if (toggle && navLinks) {
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
 
-    const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
+  // 📬 Contact form submission
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("form-status");
 
-    status.textContent = "Sending...";
-    status.style.display = "block";
+  if (form && status) {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
 
-    try {
-      const response = await fetch("https://theespressocup-server.onrender.com/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        message: form.message.value,
+      };
 
-      if (response.ok) {
-        status.textContent = "Message sent! I’ll get back to you soon.";
-        form.reset();
-      } else {
-        status.textContent = "Something went wrong.";
+      status.textContent = "Sending...";
+      status.style.display = "block";
+
+      try {
+        const response = await fetch("https://theespressocup-server.onrender.com/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          status.textContent = "Message sent! I’ll get back to you soon.";
+          form.reset();
+        } else {
+          status.textContent = "Something went wrong.";
+        }
+      } catch (error) {
+        console.error(error);
+        status.textContent = "Failed to connect to server.";
       }
-    } catch (error) {
-      console.error(error);
-      status.textContent = "Failed to connect to server.";
-    }
-  });
-}
+    });
+  }
+});
+
