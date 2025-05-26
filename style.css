@@ -141,19 +141,19 @@ a:hover {
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
- .navbar.container {
+.navbar.container {
     flex-direction: column; /* Stack items vertically */
     align-items: flex-start; /* Align logo to left */
   }
 
- .nav-toggle {
+.nav-toggle {
     display: block;
     position: absolute; /* Position toggle button */
     right: 1.5em;
     top: 1em;
   }
 
- .nav-links {
+.nav-links {
     display: none; /* Hidden by default on mobile */
     flex-direction: column;
     width: 100%;
@@ -163,17 +163,17 @@ a:hover {
     margin-top: 1em; /* Space below logo */
   }
 
- .nav-links.active {
+.nav-links.active {
     display: flex; /* Show when active */
   }
 
- .nav-links li {
+.nav-links li {
     margin: 0;
     text-align: center;
     padding: 0.5em 0;
   }
 
- .nav-links a {
+.nav-links a {
     padding: 0.8em 0;
   }
 }
@@ -212,7 +212,7 @@ main {
 
 /* Hero Section Specifics */
 .hero-card {
-  background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB4MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Placeholder image */
+  background-image: url('images/coffee-splash.jpg'); /* NEW: Local image path */
   background-size: cover;
   background-position: center;
   color: var(--text-light);
@@ -472,17 +472,17 @@ main {
 @media (max-width: 768px) {
   h1 { font-size: 2em; }
   h2 { font-size: 1.7em; }
- .hero-card { padding: 3em 1em; min-height: 300px; }
- .hero-card h1 { font-size: 2.2em; }
- .hero-card p { font-size: 1em; }
- .cta-button { padding: 0.7em 1.2em; font-size: 0.9em; }
- .card-content { padding: 1.5em; }
- .post-list { grid-template-columns: 1fr; } /* Stack posts vertically */
- .blog-post-content h1 { font-size: 2em; }
- .blog-post-content p { font-size: 1em; }
+.hero-card { padding: 3em 1em; min-height: 300px; }
+.hero-card h1 { font-size: 2.2em; }
+.hero-card p { font-size: 1em; }
+.cta-button { padding: 0.7em 1.2em; font-size: 0.9em; }
+.card-content { padding: 1.5em; }
+.post-list { grid-template-columns: 1fr; } /* Stack posts vertically */
+.blog-post-content h1 { font-size: 2em; }
+.blog-post-content p { font-size: 1em; }
 
   /* Adjustments for mobile navigation */
- .container {
+.container {
     padding: 0 1em; /* Smaller padding on mobile */
   }
 }
