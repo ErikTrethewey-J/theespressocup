@@ -9,7 +9,6 @@
 <body>
 
   <div class="site-wrapper">
-    <!-- Navbar -->
     <header class="navbar">
       <div class="container">
         <div class="logo">The Espresso Cup</div>
@@ -18,41 +17,38 @@
           <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="blog/">Blog</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- Contact Form -->
     <main>
-      <section class="section-card">
-        <div class="card-content">
-          <h1>Send Me Coffee Thoughts</h1>
-          <p>Have a question, suggestion, or just want to geek out over espresso? Fill out the form below:</p>
+      <div class="container">
+        <section class="section-card contact-form-container">
+          <div class="card-content">
+            <h1>Get in Touch</h1>
+            <p>Have a question about coffee, a suggestion for the blog, or just want to say hello? Fill out the form below!</p>
+            <form id="contactForm">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required />
 
-<form class="contact-form" id="contactForm">
-  <label for="name">Your Name</label>
-  <input type="text" name="name" id="name" required />
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
 
-  <label for="email">Email</label>
-  <input type="email" name="email" id="email" required />
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
 
-  <label for="message">Your Message</label>
-  <textarea name="message" id="message" rows="6" required></textarea>
-
-  <button type="submit" class="cta-button">Send Message</button>
-
-  <p id="form-status" class="form-status" style="display: none;">Sending...</p>
-</form>
-
-        </div>
-      </section>
+              <button type="submit" class="cta-button">Send Message</button>
+              <div id="form-status"></div>
+            </form>
+          </div>
+        </section>
+      </div>
     </main>
   </div>
 
-  <!-- Footer -->
   <footer class="footer">
     © 2025 The Espresso Cup. All rights reserved.
   </footer>

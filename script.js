@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       status.textContent = "Sending...";
       status.style.display = "block";
+      status.classList.remove("success", "error"); // Clear previous status classes
 
       try {
         const response = await fetch("https://theespressocup-server.onrender.com/contact", {
@@ -35,15 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (response.ok) {
           status.textContent = "Message sent! I’ll get back to you soon.";
+          status.classList.add("success"); // Add success class for green styling
           form.reset();
         } else {
-          status.textContent = "Something went wrong.";
+          status.textContent = "Something went wrong. Please try again.";
+          status.classList.add("error"); // Add error class for red styling
         }
       } catch (error) {
         console.error(error);
-        status.textContent = "Failed to connect to server.";
+        status.textContent = "Failed to connect to server. Please check your internet connection.";
+        status.classList.add("error"); // Add error class for red styling
       }
     });
   }
 });
-
